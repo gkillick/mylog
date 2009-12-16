@@ -1,0 +1,6 @@
+<h1> <%= @sport.name %> </h1>
+
+Activities under this sport: <br />
+<% @sport.activities.each do |activity| %>
+<%= activity.name %> <br />
+<% end -%>

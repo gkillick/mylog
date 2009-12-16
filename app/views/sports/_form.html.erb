@@ -1,0 +1,11 @@
+<% form_for @sport do |f| %>
+<%= error_messages_for :sport %>
+<%= f.label :name %>
+<%= f.text_field :name %> <br />
+
+<% Activity.all.each do |activity| %>
+  <%= check_box_tag "sport[activity_ids][]", activity.id, @sport.activities.include?(activity) %> <%= activity.name %> <br />
+<% end %>
+
+<%= f.submit "Save" %>
+<% end %>

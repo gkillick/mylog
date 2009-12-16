@@ -1,6 +1,6 @@
 class SportsController < ApplicationController
-  def index 
-    @sports = Sport.all 
+  def index
+    @sports = Sport.all
   end
   def new
     @sport = Sport.new
@@ -16,7 +16,7 @@ class SportsController < ApplicationController
   def edit
     @sport = Sport.find(params[:id])
   end
-  def update 
+  def update
     @sport = Sport.find(params[:id])
     if @sport.update_attributes(params[:sport])
       redirect_to sports_path
@@ -29,4 +29,9 @@ class SportsController < ApplicationController
     @sport.destroy
     redirect_to sports_path
   end
+
+  def show
+    @sport = Sport.find(params[:id])
+  end
+
 end

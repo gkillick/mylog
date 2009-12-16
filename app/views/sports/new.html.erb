@@ -1,6 +1,2 @@
-<% form_for @sport do |f| %>
-<%= error_messages_for :sport %>
-<%= f.label :name %> 
-<%= f.text_field :name %>
-<%= f.submit "Create" %>
-<% end %>
+<h1>Create new sport</h1>
+<%= render :partial => "form" %>

@@ -1,4 +1,8 @@
 <% @sports.each do |sport| %>
-<%= sport.name %> <%= link_to :edit, edit_sport_path(sport) %> <%= link_to :destroy, sport_path(sport), :method=>:delete, :confirm=>"are you sure?" %>
+<%= link_to sport.name, sport_path(sport) %> <%= link_to :edit, edit_sport_path(sport) %> <%= link_to :destroy, sport_path(sport), :method=>:delete, :confirm=>"are you sure?" %>
 <br />
 <% end %>
+
+<br />
+<%= link_to "Add new sport", new_sport_path %>
+
