@@ -1,0 +1,6 @@
+<% form_for @activity do |f| %>
+<%= error_messages_for :activity %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit "Create" %>
+<% end %>

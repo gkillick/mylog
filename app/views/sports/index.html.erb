@@ -1,0 +1,4 @@
+<% @sports.each do |sport| %>
+<%= sport.name %> <%= link_to :edit, edit_sport_path(sport) %> <%= link_to :destroy, sport_path(sport), :method=>:delete, :confirm=>"are you sure?" %>
+<br />
+<% end %>
