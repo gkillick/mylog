@@ -1999,3 +1999,67 @@ Processing SportsController#index (for 127.0.0.1 at 2009-12-15 15:04:11) [GET]
   [4;36;1mSport Load (0.6ms)[0m   [0;1mSELECT * FROM "sports" [0m
 Rendering sports/index
 Completed in 107ms (View: 102, DB: 1) | 200 OK [http://0.0.0.0/sports]
+
+
+Processing SportsController#edit (for 127.0.0.1 at 2009-12-15 17:29:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Rendering sports/edit
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/sports/1/edit]
+
+
+Processing SportsController#update (for 127.0.0.1 at 2009-12-15 17:29:12) [PUT]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"1df5622d11deeb2a7e93a4ffe1c9e1ecbd046441", "id"=>"1", "sport"=>{"name"=>"cross country ski"}}
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mSport Exists (0.2ms)[0m   [0;1mSELECT "sports".id FROM "sports" WHERE ("sports"."name" = 'cross country ski' AND "sports".id <> 1) LIMIT 1[0m
+  [4;35;1mSport Update (0.5ms)[0m   [0mUPDATE "sports" SET "updated_at" = '2009-12-16 00:29:12', "name" = 'cross country ski' WHERE "id" = 1[0m
+Redirected to /sports
+Completed in 92ms (DB: 1) | 302 Found [http://0.0.0.0/sports/1]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2009-12-15 17:29:12) [GET]
+  [4;36;1mSport Load (0.6ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering sports/index
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/sports]
+
+
+Processing SportsController#destroy (for 127.0.0.1 at 2009-12-15 17:29:22) [DELETE]
+  Parameters: {"authenticity_token"=>"1df5622d11deeb2a7e93a4ffe1c9e1ecbd046441", "id"=>"1"}
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mActivity Load (0.6ms)[0m   [0;1mSELECT * FROM "activities" INNER JOIN "activities_sports" ON "activities".id = "activities_sports".activity_id WHERE ("activities_sports".sport_id = 1 ) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDELETE FROM "activities_sports" WHERE sport_id = 1 AND activity_id IN (2)[0m
+  [4;36;1mSport Destroy (0.2ms)[0m   [0;1mDELETE FROM "sports" WHERE "id" = 1[0m
+Redirected to /sports
+Completed in 67ms (DB: 2) | 302 Found [http://0.0.0.0/sports/1]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2009-12-15 17:29:22) [GET]
+  [4;35;1mSport Load (0.6ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering sports/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/sports]
+
+
+Processing SportsController#new (for 127.0.0.1 at 2009-12-15 17:29:26) [GET]
+Rendering sports/new
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/sports/new]
+
+
+Processing SportsController#create (for 127.0.0.1 at 2009-12-15 17:29:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1df5622d11deeb2a7e93a4ffe1c9e1ecbd046441", "sport"=>{"name"=>"Cross Country Ski"}}
+  [4;36;1mSport Exists (0.2ms)[0m   [0;1mSELECT "sports".id FROM "sports" WHERE ("sports"."name" = 'Cross Country Ski') LIMIT 1[0m
+  [4;35;1mSport Create (0.4ms)[0m   [0mINSERT INTO "sports" ("name", "created_at", "updated_at") VALUES('Cross Country Ski', '2009-12-16 00:29:32', '2009-12-16 00:29:32')[0m
+Redirected to /sports
+Completed in 12ms (DB: 1) | 302 Found [http://0.0.0.0/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2009-12-15 17:29:32) [GET]
+  [4;36;1mSport Load (0.6ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering sports/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2009-12-15 17:34:15) [GET]
+  [4;35;1mSport Load (0.6ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/sports]
