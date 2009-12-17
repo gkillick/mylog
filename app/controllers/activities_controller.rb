@@ -30,4 +30,7 @@ class ActivitiesController < ApplicationController
     @activity.destroy
     redirect_to activities_path
   end
+  def show
+    @activity = Activity.find(params[:id])
+  end
 end

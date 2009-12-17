@@ -1,0 +1,6 @@
+<h1><%= @activity.name %></h1>
+Sports this activity belongs to:
+<% @activity.sports.each do |sport| %>
+<br />
+<%= sport.name %> 
+<% end %>
