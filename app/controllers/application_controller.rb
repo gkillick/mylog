@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'e278d2febdb500ed7309a67b1ebcc666'
 
-  helper_method :current_user_session, :current_user
+  helper_method :current_user_session, :current_user, :logged_in?
   filter_parameter_logging :password, :password_confirmation
 
   # See ActionController::Base for details 
@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
   private
+  def logged_in?
+    !current_user.nil?
+  end
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find

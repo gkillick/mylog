@@ -1,0 +1,3 @@
+class Athlete < User
+  
+end
