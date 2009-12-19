@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 map.resources :activities
 map.resources :sports
-map.resource :user_session
+map.resource :user_session #why did we make this singular? I dont quite understand that...
 map.resources :users
   # The priority is based upon order of creation: first created -> highest priority.
 

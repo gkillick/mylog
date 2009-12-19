@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:user])
+    @user = params[:user][:type] == "Athlete" ? Athlete.new(params[:user]) : Coach.new(params[:user])
     if @user.save
       flash[:notice] = "Account registered!"
       redirect_back_or_default sports_path
