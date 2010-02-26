@@ -3,7 +3,7 @@ map.resources :activities
 map.resources :sports
 map.resource :user_session #why did we make this singular? I dont quite understand that...
 map.resources :users
-map.resources :athletes do |athletes| 
+map.resources :athletes, :member => { :dashboard => :get } do |athletes| 
   athletes.resources :log_entries
 end
   # The priority is based upon order of creation: first created -> highest priority.
