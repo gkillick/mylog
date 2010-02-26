@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2009-12-21
+  summary: MyText
+  sport_id: 1
+  activity_id: 1
+  athlete_id: 1
+  feel: 1
+
+two:
+  date: 2009-12-21
+  summary: MyText
+  sport_id: 1
+  activity_id: 1
+  athlete_id: 1
+  feel: 1

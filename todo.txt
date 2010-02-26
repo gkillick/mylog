@@ -1,0 +1,22 @@
+1. filter activities by sport when creating a new log entry
+2. Editing activity list for an athlete (list should be sortable jquery)
+3. Network of Athletes (same team)
+4. graphs of data
+5. Log_entries form should be loaded from dashboard via ajax
+6. jquery slider for feel
+7. For viewing entries between 2 input date fields generate graph up top and workouts listed below. 
+8. activity selector make like westjet.ca for selecting airports
+
+Future development:
+1. Iphone/Android/blackberry app support
+2. Export to excel? or pdf...
+
+Homework: 
+create dashboard view 
+log entries you have
+show action of athletes controller
+
+index view of log entries 
+athlete id parameter from url
+
+work on css 

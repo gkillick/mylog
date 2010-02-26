@@ -7,18 +7,22 @@
 <title>My log</title>
 <%= stylesheet_link_tag 'reset' %>
 <%= stylesheet_link_tag 'text' %>
-<%= stylesheet_link_tag '960' %>
 <%= stylesheet_link_tag 'style' %>
 
 </head>
 <body>
-<div class="container_12" >
-	<div class="grid_10 prefix_1 suffix_1">
-	<img src="/images/mylog.png" />
-<p style="color: green"><%= flash[:notice] %></p>
-<%= session_links %>
-<%= yield %>
-</div>
-</div>
+  <div id="main_container" >
+    <div id="above_content" >
+	    <div id="logo" ><img src="/images/mylog.png" /></div>
+	    <div id="top_nav" ><div id="bleft"></div><div id="join" ><%= register %></div><div id="links"><%= session_links %></div><div id="bright" ></div></div>
+	  </div>
+	  <div id="border_top" ></div>
+	  <div id="content" >
+      <p class="pflash"><%= flash[:notice] %></p>
+      <%= yield %>
+    </div>
+    <div id="border_bottom" ></div>
+    
+  </div>
 </body>
 </html>

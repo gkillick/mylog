@@ -1,0 +1,8 @@
+<%= f.label :summary %>
+<%= f.text_area :summary %>
+<br />
+<%= f.label :activity_id, "Activity " %><%= f.select :activity_id, Activity.all.collect {|a| [ a.name, a.id ] } %>
+<br />
+<%= f.label :date %><%= f.date_select :date %>
+<br />
+<%= f.label :feel %><%= f.text_field :feel %>
