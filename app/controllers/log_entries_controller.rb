@@ -7,9 +7,13 @@ class LogEntriesController < ApplicationController
     @athlete = current_user
     @log_entry = @athlete.log_entries.build(params[:log_entry])
     if @log_entry.save
-      redirect_to sports_path
+      redirect_to dashboard_athlete_path(@athlete)
     else
       render :action=>"new"
     end
+  end
+  def index 
+    @athlete = current_user
+    @log_entries = @athlete.log_entries.all 
   end
 end

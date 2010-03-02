@@ -3,4 +3,7 @@ class AthletesController < ApplicationController
     @athlete = current_user
     
   end
+  def list
+    @athlete = current_user
+  end
 end
