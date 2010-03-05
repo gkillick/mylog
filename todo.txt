@@ -6,6 +6,7 @@
 6. jquery slider for feel
 7. For viewing entries between 2 input date fields generate graph up top and workouts listed below. 
 8. activity selector make like westjet.ca for selecting airports
+9. Make sure the user is logged in when accessing the log entries controller
 
 Future development:
 1. Iphone/Android/blackberry app support
