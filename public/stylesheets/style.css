@@ -112,3 +112,7 @@ div#content
 {
 	margin: 0;
 }
+div#log_entry_feel_slider 
+{
+	width: 200px;
+}
