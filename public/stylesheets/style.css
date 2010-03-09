@@ -117,3 +117,6 @@ div#log_entry_feel_slider {
         width: 370px;
 }
 
+.fieldWithErrors {
+        border: 1px solid red;
+}

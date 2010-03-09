@@ -1,5 +1,8 @@
 <% @log_entries.each do |entry| %>
+<div>
   <%= entry.date %><br />
   <%= entry.summary %><br />
   <%= entry.feel %><br />
+  <%= link_to "Edit", edit_athlete_log_entry_path(@athlete, entry) %>
+</div>
 <% end %>

@@ -7,3 +7,21 @@
 <br />
 <%= f.label :feel %><div id="log_entry_feel_slider" ></div>
 <%= f.hidden_field :feel %>
+
+<% f.fields_for :workouts do |workout_fields| %>
+<div>
+  <%= workout_fields.label :duration %>
+  <%= workout_fields.text_field :duration %>
+
+  <%= workout_fields.label :time_of_day %>
+  <%= workout_fields.select :time_of_day, [["AM", "AM"], ["PM", "PM"]] %>
+
+  <%= workout_fields.label :activity_id, "Activity " %>
+  <%= workout_fields.select :activity_id, Activity.all.collect {|a| [ a.name, a.id ] } %>
+
+  <% unless @log_entry.new_record? %>
+     <%= workout_fields.check_box :_delete  %>
+     <%= workout_fields.label :_delete, "Delete?"  %>
+  <% end %>
+</div>
+<% end %>

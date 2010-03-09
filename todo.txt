@@ -1,3 +1,4 @@
+0. Dynamically add new Workouts when you are creating a new LogEntry
 1. filter activities by sport when creating a new log entry
 2. Editing activity list for an athlete (list should be sortable jquery)
 3. Network of Athletes (same team)
@@ -6,6 +7,7 @@
 6. For viewing entries between 2 input date fields generate graph up top and workouts listed below. 
 7. activity selector make like westjet.ca for selecting airports
 8. Each log_entry can contain multiple workouts
+9. When you add a workout, you should read/write the time in HH:MM format
 
 Future development:
 1. Iphone/Android/blackberry app support
@@ -14,8 +16,3 @@ Future development:
 Homework: 
 Add css style up dashboard
 
-am/pm
-duration
-activity
-
-zone 4

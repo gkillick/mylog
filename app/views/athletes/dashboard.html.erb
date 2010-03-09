@@ -1,6 +1,8 @@
 <% @athlete.log_entries.recent.each do |entry| %>
-<%= entry.date %><br />
-<%= entry.summary %><br />
-<%= entry.feel %><br />
-
+<div>
+  <%= entry.date %><br />
+  <%= entry.summary %><br />
+  <%= entry.feel %><br />
+  <%= link_to "Edit", edit_athlete_log_entry_path(@athlete, entry) %>
+</div>
 <% end %>
