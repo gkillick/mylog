@@ -3,10 +3,9 @@
 3. Network of Athletes (same team)
 4. graphs of data
 5. You should be able to add several log entries at once. 
-6. jquery slider for feel
-7. For viewing entries between 2 input date fields generate graph up top and workouts listed below. 
-8. activity selector make like westjet.ca for selecting airports
-9. Make sure the user is logged in when accessing the log entries controller
+6. For viewing entries between 2 input date fields generate graph up top and workouts listed below. 
+7. activity selector make like westjet.ca for selecting airports
+8. Make sure the user is logged in when accessing the log entries controller
 
 Future development:
 1. Iphone/Android/blackberry app support
@@ -14,4 +13,4 @@ Future development:
 
 Homework: 
 Add css style up dashboard
- 
+Implement the require_athlete before_filter, which is called in LogEntriesController. It should be implemented in ApplicationController.
