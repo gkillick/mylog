@@ -31,4 +31,9 @@ describe Workout do
     w[:duration] = 150
     w.duration == "2:30"
   end
+
+  it "should return 0 as a duration for an empty workout" do
+    w = Workout.new
+    w.duration.should == "0:00"
+  end
 end
