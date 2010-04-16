@@ -8,6 +8,7 @@
 7. activity selector make like westjet.ca for selecting airports
 8. Each log_entry can contain multiple workouts
 9. When you add a workout, you should read/write the time in HH:MM format
+10. slider changes the value when you go to edit. 
 
 Future development:
 1. Iphone/Android/blackberry app support

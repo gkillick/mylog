@@ -10,16 +10,19 @@
 <% f.fields_for :workouts do |workout_fields| %>
 <div>
   <%= workout_fields.label :duration %>
-  <%= workout_fields.text_field :duration, :value => workout_fields.object.duration %>
+  <%= workout_fields.text_field :duration %>
 
   <%= workout_fields.select :time_of_day, [["AM", "AM"], ["PM", "PM"]] %>
 
   <%= workout_fields.label :activity_id, "Activity " %>
   <%= workout_fields.select :activity_id, Activity.all.collect {|a| [ a.name, a.id ] } %>
+  
 
   <% unless @log_entry.new_record? %>
      <%= workout_fields.check_box :_delete  %>
      <%= workout_fields.label :_delete, "Delete?"  %>
+
   <% end %>
+     <img src="/images/add1.png" id="add" >
 </div>
 <% end %>
