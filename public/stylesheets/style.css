@@ -120,6 +120,6 @@ div#log_entry_feel_slider {
 .fieldWithErrors {
         border: 1px solid red;
 }
-img#add {
+img.minus {
 	position: relative; top:7px; bottom: 0px;
 }
