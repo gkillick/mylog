@@ -6,4 +6,10 @@ $(document).ready(function(){
 		$("#log_entry_feel").val($("#log_entry_feel_slider").slider('value'));
 	});
 	$("#log_entry_feel_slider").slider('value', 50);
+	
+	$("input.duration_field").live("click", function(event){
+		if ($(this).val() == "0:00"){
+			$(this).val("");
+		}
+	});
 });
