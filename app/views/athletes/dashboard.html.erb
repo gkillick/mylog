@@ -1,12 +1,17 @@
 <div>
-	<%= plot_hours_graph(@athlete) %>
+	<%= image_tag plot_hours_graph(@athlete) %>
 </div>
 
 <% @athlete.log_entries.recent.each do |entry| %>
 <div>
-  <%= entry.date %><br />
-  <%= entry.summary %><br />
-  <%= entry.feel %><br />
-  <%= link_to "Edit", edit_athlete_log_entry_path(@athlete, entry) %>
+	<ul>
+  <li><%= entry.date %></li>
+  <li><%= entry.summary %></li>
+  <li><%= entry.feel %></li>
+  <li><%= link_to "Edit", edit_athlete_log_entry_path(@athlete, entry) %></li>
+  <li><%= link_to "Remove", athlete_log_entry_path(@athlete, entry), :method => :delete %></li>
+</ul>
 </div>
 <% end %>
+
+<%= link_to "Add new log entry", new_athlete_log_entry_path(@athlete) %>

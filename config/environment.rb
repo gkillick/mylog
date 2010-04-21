@@ -26,6 +26,8 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   config.gem "authlogic"
   config.gem "googlecharts"
+  config.gem "factory_girl", :source => "http://gemcutter.org"
+  
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"

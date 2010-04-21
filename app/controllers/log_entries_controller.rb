@@ -4,7 +4,8 @@ class LogEntriesController < ApplicationController
   def new
     @athlete = current_user
     @log_entry = @athlete.log_entries.build
-    3.times { @log_entry.workouts.build }
+    @log_entry.workouts.build(:time_of_day => "AM")
+    @log_entry.workouts.build(:time_of_day => "PM")    
   end
 
   def create
@@ -30,6 +31,14 @@ class LogEntriesController < ApplicationController
     else
       render :action=>"edit"
     end
+  end
+  
+  def destroy
+    @athlete = current_user
+    @log_entry = @athlete.log_entries.find(params[:id])
+    @log_entry.destroy
+    flash[:notice] = "Log entry was deleted!"
+    redirect_to dashboard_athlete_path(@athlete)
   end
 
   def index 

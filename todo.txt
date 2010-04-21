@@ -1,3 +1,4 @@
+0. Color the bars in the dashboard graph
 1. filter activities by sport when creating a new log entry
 2. Editing activity list for an athlete (list should be sortable jquery)
 3. Network of Athletes (same team)

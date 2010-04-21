@@ -13,7 +13,12 @@ class Workout < ActiveRecord::Base
   end
   
   def duration
+    #time = duration_in_minutes
     time = self[:duration] || 0
     "%d:%.2d" % [time / 60, time % 60]
+  end
+  
+  def duration_in_minutes
+    self[:duration] || 0
   end
 end
