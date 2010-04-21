@@ -8,6 +8,7 @@
 <%= f.hidden_field :feel %>
 
 <div class="workouts">
+<%= f.link_to_add image_tag("add1.png", :class => "plus"), :workouts %>	
 <% f.fields_for :workouts do |workout_fields| %>
 <div>
 	<%= workout_fields.label :duration %>
@@ -21,5 +22,5 @@
 	<%= workout_fields.link_to_remove image_tag("delete.png", :class => "minus") %>	
 </div>
 <% end %>
-<%= f.link_to_add image_tag("add1.png", :class => "plus"), :workouts %>
+
 </div>
