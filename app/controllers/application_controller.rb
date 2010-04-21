@@ -61,4 +61,8 @@ class ApplicationController < ActionController::Base
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
   end  
+  
+  def redirect_to_dashboard(user)
+     redirect_to user.is_a?(Athlete) ? dashboard_athlete_path(user) : dashboard_coach_path(user)
+  end
 end

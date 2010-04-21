@@ -1,3 +1,7 @@
+<div>
+	<%= plot_hours_graph(@athlete) %>
+</div>
+
 <% @athlete.log_entries.recent.each do |entry| %>
 <div>
   <%= entry.date %><br />

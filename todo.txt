@@ -1,4 +1,3 @@
-0. Dynamically add new Workouts when you are creating a new LogEntry
 1. filter activities by sport when creating a new log entry
 2. Editing activity list for an athlete (list should be sortable jquery)
 3. Network of Athletes (same team)
